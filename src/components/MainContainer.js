@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import VideoContainer from "./VideoContainer";
 import AllFilterButtons from "./AllFilterButtons";
-import { YOUTUBE_API } from "../uitls/constants";
 
 const MainContainer = () => {
   const [videoList, setVideoList] = useState([]);
@@ -9,7 +8,8 @@ const MainContainer = () => {
     getVideoList();
   }, []);
   const getVideoList = async () => {
-    const data = await fetch(YOUTUBE_API);
+    console.log(process.env.YOUTUBE_API);
+    const data = await fetch(process.env.YOUTUBE_API);
     const res = await data.json();
     setVideoList(res.items);
   };
