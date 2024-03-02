@@ -12,10 +12,11 @@ import { useSelector } from "react-redux";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((state) => state.hamburgerToggle.isMenuOpen);
+  const isAllMenuClose = useSelector((state) => state.hamburgerToggle.allMenu);
 
   if (!isMenuOpen)
     return (
-      <div>
+      <div className={isAllMenuClose ? "hidden" : ""}>
         <ul className="m-5">
           <li className="my-5">
             <a href="/" className="flex flex-col justify-center items-center">
