@@ -5,6 +5,7 @@ const hamburgerToggleSlice = createSlice({
   initialState: {
     isMenuOpen: false,
     allMenu: false,
+    replyMenu: false,
   },
   reducers: {
     toggleMenu: (state) => {
@@ -13,7 +14,11 @@ const hamburgerToggleSlice = createSlice({
     closeMenu: (state) => {
       state.allMenu = true;
     },
+    toggleReplyMenu: (state) => {
+      state.replyMenu = !state.replyMenu;
+    },
   },
 });
 export default hamburgerToggleSlice.reducer;
-export const { toggleMenu, closeMenu } = hamburgerToggleSlice.actions;
+export const { toggleMenu, closeMenu, toggleReplyMenu } =
+  hamburgerToggleSlice.actions;

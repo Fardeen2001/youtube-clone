@@ -31,7 +31,7 @@ const VideoContainer = ({ videoInfo }) => {
 
 export const SuggestionVideoCard = ({ videoInfo }) => {
   return (
-    <div className="p-2 m-2 shadow-md">
+    <div className="p-2 m-1 w-70 shadow-md">
       <VideoDataCard
         videoInfo={videoInfo}
         imageURL={videoInfo?.snippet?.thumbnails?.medium}

@@ -9,6 +9,7 @@ import { CiYoutube } from "react-icons/ci";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((state) => state.hamburgerToggle.isMenuOpen);
@@ -19,28 +20,40 @@ const SideBar = () => {
       <div className={isAllMenuClose ? "hidden" : ""}>
         <ul className="m-5">
           <li className="my-5">
-            <a href="/" className="flex flex-col justify-center items-center">
+            <Link
+              to={"/"}
+              className="flex flex-col justify-center items-center"
+            >
               <IoIosHome className="home text-2xl" />
               <label htmlFor="home">Home</label>
-            </a>
+            </Link>
           </li>
           <li className="my-5">
-            <a href="/" className="flex flex-col justify-center items-center">
+            <Link
+              to={"/"}
+              className="flex flex-col justify-center items-center"
+            >
               <SiYoutubeshorts className="Shorts text-2xl" />
               <label htmlFor="Shorts">Shorts</label>
-            </a>
+            </Link>
           </li>
           <li className="my-5">
-            <a href="/" className="flex flex-col justify-center items-center">
+            <Link
+              to={"/"}
+              className="flex flex-col justify-center items-center"
+            >
               <MdSubscriptions className="Sub text-2xl" />
               <label htmlFor="Sub">Subscription</label>
-            </a>
+            </Link>
           </li>
           <li className="my-5">
-            <a href="/" className="flex flex-col justify-center items-center">
+            <Link
+              to={"/"}
+              className="flex flex-col justify-center items-center"
+            >
               <BiSolidVideos className="video text-2xl" />
               <label htmlFor="video">You</label>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -51,22 +64,28 @@ const SideBar = () => {
       <ul className="m-5">
         <li className="my-4 cursor-pointer">
           {" "}
-          <a href="/" className="flex p-2 bg-gray-200 rounded-xl w-full">
+          <Link to={"/"} className="flex p-2 bg-gray-200 rounded-xl w-full">
             <IoIosHome className=" text-2xl mr-3" />
             <span>Home</span>{" "}
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full"
+          >
             <SiYoutubeshorts className="short text-2xl mr-3" />
             <span>Shorts</span>
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full ">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full "
+          >
             <MdSubscriptions className=" text-2xl mr-3" />
             <span>Subscriptions</span>
-          </a>
+          </Link>
         </li>
       </ul>
       <hr />
@@ -75,34 +94,49 @@ const SideBar = () => {
 
         <li className="my-4 cursor-pointer">
           {" "}
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full"
+          >
             <CgProfile className="text-2xl mr-3" />
             <span>Your Channel</span>{" "}
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full ">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full "
+          >
             <GoHistory className=" text-2xl mr-3" />
             <span>History</span>
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full"
+          >
             <CiYoutube className="text-2xl mr-3" />
             <span>your Videos</span>
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full"
+          >
             <MdOutlineWatchLater className=" text-2xl mr-3" />
             <span>Watch Later</span>
-          </a>
+          </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <a href="/" className="flex p-2 hover:bg-gray-200 rounded-xl w-full">
+          <Link
+            to={"/"}
+            className="flex p-2 hover:bg-gray-200 rounded-xl w-full"
+          >
             <FaAngleDown className=" text-2xl mr-3" />
             <span>See More</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

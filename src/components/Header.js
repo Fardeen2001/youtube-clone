@@ -6,6 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../uitls/redux/reducers/hamburgerToggle";
 import { cachedResult } from "../uitls/redux/reducers/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [suggestionsText, setSuggestionsText] = useState("");
@@ -28,6 +29,7 @@ const Header = () => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [suggestionsText]);
   const getSuggestion = async () => {
     try {
@@ -47,7 +49,7 @@ const Header = () => {
     }
   };
   return (
-    <div className="grid grid-flow-col shadow-lg w-screen md:w-screen lg:w-screen">
+    <div className="grid grid-flow-col shadow-lg">
       <div className="logo col-span-1 flex justify-evenly items-center">
         <RxHamburgerMenu
           className="text-2xl cursor-pointer"

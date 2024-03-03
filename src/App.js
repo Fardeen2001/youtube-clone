@@ -22,10 +22,10 @@ const appRouter = createBrowserRouter([
 ]);
 const App = () => {
   return (
-    <div className="w-screen">
+    <>
       <Header />
       <RouterProvider router={appRouter} />
-    </div>
+    </>
   );
 };
 
